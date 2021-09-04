@@ -16,5 +16,3 @@ h_load() {
     . $FN_PATH/export
   fi
 }
-
-h_load run

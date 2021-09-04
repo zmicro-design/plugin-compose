@@ -3,4 +3,3 @@
 # load user config
 load_user_config
 
-. $SWARM_PLUGIN_CORE_PATH/load
