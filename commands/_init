@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # load user config
-load_user_config
+# load_user_config
 

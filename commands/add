@@ -45,6 +45,7 @@ core() {
     exit 1
   fi
 
+  # @TODO PURE
   zmicro config service $service_dir
 
   log_success "[$(timestamp)][service] add success $service_dir"

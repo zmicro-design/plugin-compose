@@ -17,8 +17,10 @@ core() {
   local service_name=$1
   local args=${@:2}
 
-  zmicro_service_run $service_name down $args
+  # pull
   zmicro_service_run $service_name pull $args
+  # rollup
+  # zmicro_service_run $service_name down $args
   zmicro_service_run $service_name up -d $args
 }
 

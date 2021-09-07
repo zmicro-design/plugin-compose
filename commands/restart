@@ -17,8 +17,14 @@ core() {
   local service_name=$1
   # local args=${@:2}
   # zmicro_service_run $service_name restart $args
-  zmicro service stop $service_name
-  zmicro service start $service_name
+
+  # zmicro service stop $service_name
+  # zmicro service start $service_name
+
+  # stop
+  zmicro_service_run $service_name down $args
+  # then start
+  zmicro_service_run $service_name up -d $args
 }
 
 run() {
