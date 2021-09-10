@@ -21,7 +21,8 @@ core() {
 
   log_debug "[service][exec] command: $command"
 
-  local services=$(zmicro service ps $service_name --services)
+  # zmicro_service_run $service_name ps $args
+  local services=$(zmicro_service_run $service_name ps --services)
   local count=$(echo $services | wc -w)
   log_debug "[service][exec] select services: $services, count: $count"
 
