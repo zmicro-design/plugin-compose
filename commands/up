@@ -2,7 +2,7 @@
 
 help() {
   echo "Usage:"
-  echo "  zmicro service up <service_name> [options...]"
+  echo "  zcompose up <service_name> [options...]"
 }
 
 core() {
