@@ -21,6 +21,10 @@ core() {
   # zmicro service stop $service_name
   # zmicro service start $service_name
 
+  # 滚动更新
+  # pull latest, make it as rolling update
+  zmicro_service_run $service_name pull $args
+
   # stop
   zmicro_service_run $service_name down $args
   # then start
