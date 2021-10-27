@@ -34,21 +34,21 @@ core() {
 
   local service_dir=$1
   if [ "$service_dir" = "" ]; then
-    log_error "service dir is requreid"
+    log::error "service dir is requreid"
     exit 1
   fi
   
-  log_debug "[$(timestamp)][service] add $service_dir"
+  log::debug "[$(timestamp)][service] add $service_dir"
   
   if [ ! -d $service_dir ]; then
-    log_error "[$(timestamp)][service] service_dir is not a directory"
+    log::error "[$(timestamp)][service] service_dir is not a directory"
     exit 1
   fi
 
   # @TODO PURE
   zmicro config service $service_dir
 
-  log_success "[$(timestamp)][service] add success $service_dir"
+  log::success "[$(timestamp)][service] add success $service_dir"
 }
 
 run() {

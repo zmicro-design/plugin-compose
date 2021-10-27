@@ -18,9 +18,9 @@ core() {
   local args=${@:2}
 
   # stop
-  zmicro_service_run $service_name down $args
+  service::run $service_name down $args
   # then start
-  zmicro_service_run $service_name up -d $args
+  service::run $service_name up -d $args
 }
 
 run() {

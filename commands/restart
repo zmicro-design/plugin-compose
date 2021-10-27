@@ -16,19 +16,19 @@ core() {
 
   local service_name=$1
   # local args=${@:2}
-  # zmicro_service_run $service_name restart $args
+  # service::run $service_name restart $args
 
   # zmicro service stop $service_name
   # zmicro service start $service_name
 
   # 滚动更新
   # pull latest, make it as rolling update
-  zmicro_service_run $service_name pull $args
+  service::run $service_name pull $args
 
   # stop
-  zmicro_service_run $service_name down $args
+  service::run $service_name down $args
   # then start
-  zmicro_service_run $service_name up -d $args
+  service::run $service_name up -d $args
 }
 
 run() {
